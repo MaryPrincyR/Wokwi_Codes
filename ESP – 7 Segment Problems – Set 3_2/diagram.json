@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "author": "MARY PRINCY R",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-mega",
+      "id": "mega1",
+      "top": -80.999999999886,
+      "left": 10.800000000113998,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": 163.380000000114,
+      "left": 125.080000000114,
+      "attrs": { "common": "cathode" }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg2",
+      "top": 163.380000000114,
+      "left": 173.08000000011398,
+      "attrs": { "common": "cathode" }
+    }
+  ],
+  "connections": [
+    [ "mega1:A0", "sevseg1:A", "empty", [ "v12.41", "h-63.84" ] ],
+    [ "mega1:A1", "sevseg1:B", "empty", [ "v17.74", "h-66" ] ],
+    [ "sevseg1:C", "mega1:A2", "empty", [ "v49.3", "h-76.01", "v-156", "h148" ] ],
+    [ "sevseg1:D", "mega1:A3", "empty", [ "v39.96", "h-48.8", "v-141.33", "h154.67" ] ],
+    [
+      "sevseg1:E",
+      "mega1:A4",
+      "empty",
+      [ "v31.96", "h-31.87", "v-126.67", "h154.67", "v-0.67", "h-1.33" ]
+    ],
+    [ "sevseg1:F", "mega1:A5", "empty", [ "v-20", "h15.2" ] ],
+    [ "sevseg1:G", "mega1:A6", "empty", [ "v-14.66", "h147.46" ] ],
+    [ "mega1:GND.2", "sevseg1:COM.2", "empty", [ "v53.07", "h-36.25" ] ],
+    [ "sevseg1:DP", "mega1:A7", "empty", [ "v21.3", "h-62.94", "v-108", "h2" ] ],
+    [ "sevseg2:A", "mega1:A8", "empty", [ "v-25.6", "h79.06" ] ],
+    [ "sevseg2:B", "mega1:A9", "empty", [ "v-9.6", "h80.12" ] ],
+    [ "sevseg2:C", "mega1:A10", "empty", [ "v51.69", "h7.73" ] ],
+    [ "sevseg2:D", "mega1:A11", "empty", [ "v43.03", "h133.6" ] ],
+    [ "sevseg2:E", "mega1:A12", "empty", [ "v36.36", "h147.86" ] ],
+    [ "sevseg2:F", "mega1:A13", "empty", [ "v-12.93", "h148.26" ] ],
+    [ "sevseg2:G", "mega1:A14", "empty", [ "v-28.93", "h163.2" ] ],
+    [ "sevseg2:DP", "mega1:A15", "empty", [ "v28.36", "h130.12", "v-1.33", "h4.67" ] ],
+    [ "mega1:GND.2", "sevseg2:COM.2", "empty", [ "v54.41", "h27.08" ] ]
+  ],
+  "dependencies": {}
+}
